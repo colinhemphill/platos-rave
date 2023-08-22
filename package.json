@@ -13,6 +13,7 @@
     "types": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@radix-ui/colors": "2.1.0",
     "@radix-ui/react-icons": "1.3.0",
     "@radix-ui/react-label": "2.0.2",
     "@radix-ui/react-slot": "1.0.2",
@@ -41,6 +42,7 @@
     "prettier": "3.0.2",
     "prettier-plugin-tailwindcss": "0.5.3",
     "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "windy-radix-palette": "0.6.1"
   }
 }

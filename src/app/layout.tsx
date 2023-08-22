@@ -1,8 +1,8 @@
 import Footer from '@/components/footer/Footer';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
+import { JetBrains_Mono } from 'next/font/google';
 import { PropsWithChildren } from 'react';
-
 import './globals.css';
 import {
   APP_DESCRIPTION,
@@ -11,6 +11,11 @@ import {
   metadataOpenGraphDefaults,
   metadataTwitterDefaults,
 } from './lib/metadata';
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+});
 
 export const metadata: Metadata = {
   // https://beta.nextjs.org/docs/api-reference/metadata#metadatabase
@@ -48,7 +53,7 @@ export const metadata: Metadata = {
 
 export default function App({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    <html className={jetbrainsMono.variable} lang="en">
       <body className="bg-background py-8 text-foreground">
         <div className="container max-w-screen-lg">
           <main>{children}</main>
