@@ -6,7 +6,7 @@ function Skeleton({
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={twMerge('animate-pulse rounded-md bg-primary/10', className)}
+      className={twMerge('bg-primary/10 animate-pulse rounded-lg', className)}
       {...props}
     />
   );

@@ -13,10 +13,13 @@ dependencies:
     version: 1.3.0(react@18.2.0)
   '@radix-ui/react-label':
     specifier: 2.0.2
-    version: 2.0.2(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
+    version: 2.0.2(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
+  '@radix-ui/react-progress':
+    specifier: 1.0.3
+    version: 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
   '@radix-ui/react-slot':
     specifier: 1.0.2
-    version: 1.0.2(@types/react@18.2.20)(react@18.2.0)
+    version: 1.0.2(@types/react@18.2.21)(react@18.2.0)
   '@tauri-apps/api':
     specifier: 1.4.0
     version: 1.4.0
@@ -34,7 +37,7 @@ dependencies:
     version: 1.11.9
   jotai:
     specifier: 2.3.1
-    version: 2.3.1(@types/react@18.2.20)(react@18.2.0)
+    version: 2.3.1(@types/react@18.2.21)(react@18.2.0)
   lucide-react:
     specifier: 0.268.0
     version: 0.268.0(react@18.2.0)
@@ -59,11 +62,11 @@ devDependencies:
     specifier: 1.4.0
     version: 1.4.0
   '@types/node':
-    specifier: 20.5.2
-    version: 20.5.2
+    specifier: 20.5.3
+    version: 20.5.3
   '@types/react':
-    specifier: 18.2.20
-    version: 18.2.20
+    specifier: 18.2.21
+    version: 18.2.21
   '@types/react-dom':
     specifier: 18.2.7
     version: 18.2.7
@@ -309,7 +312,7 @@ packages:
   /@radix-ui/colors@2.1.0:
     resolution: {integrity: sha512-gcBnxjS2u2c6thQz/9K1+Pt2ZYcm5WKU4SLi0emYkRmYbVUw+37rlc5wgLtYOsSsRP9nxVtbJJYj6WVO7UUmZg==}
 
-  /@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.20)(react@18.2.0):
+  /@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.21)(react@18.2.0):
     resolution: {integrity: sha512-fDSBgd44FKHa1FRMU59qBMPFcl2PZE+2nmqunj+BWFyYYjnhIDWL2ItDs3rrbJDQOtzt5nIebLCQc4QRfz6LJw==}
     peerDependencies:
       '@types/react': '*'
@@ -319,7 +322,21 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.22.10
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
+      react: 18.2.0
+    dev: false
+
+  /@radix-ui/react-context@1.0.1(@types/react@18.2.21)(react@18.2.0):
+    resolution: {integrity: sha512-ebbrdFoYTcuZ0v4wG5tedGnp9tzcV8awzsxYph7gXUyvnNLuTIcCk1q17JEbnVhXAKG9oX3KtchwiMIAYp9NLg==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.22.10
+      '@types/react': 18.2.21
       react: 18.2.0
     dev: false
 
@@ -331,7 +348,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@radix-ui/react-label@2.0.2(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
+  /@radix-ui/react-label@2.0.2(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-N5ehvlM7qoTLx7nWPodsPYPgMzA5WM8zZChQg8nyFJKnDO5WHdba1vv5/H6IO5LtJMfD2Q3wh1qHFGNtK0w3bQ==}
     peerDependencies:
       '@types/react': '*'
@@ -345,14 +362,14 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.22.10
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0)
-      '@types/react': 18.2.20
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
+      '@types/react': 18.2.21
       '@types/react-dom': 18.2.7
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@radix-ui/react-primitive@1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.20)(react-dom@18.2.0)(react@18.2.0):
+  /@radix-ui/react-primitive@1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-yi58uVyoAcK/Nq1inRY56ZSjKypBNKTa/1mcL8qdl6oJeEaDbOldlzrGn7P6Q3Id5d+SYNGc5AJgc4vGhjs5+g==}
     peerDependencies:
       '@types/react': '*'
@@ -366,14 +383,36 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.22.10
-      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.20)(react@18.2.0)
-      '@types/react': 18.2.20
+      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.21)(react@18.2.0)
+      '@types/react': 18.2.21
       '@types/react-dom': 18.2.7
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@radix-ui/react-slot@1.0.2(@types/react@18.2.20)(react@18.2.0):
+  /@radix-ui/react-progress@1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-5G6Om/tYSxjSeEdrb1VfKkfZfn/1IlPWd731h2RfPuSbIfNUgfqAwbKfJCg/PP6nuUCTrYzalwHSpSinoWoCag==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.22.10
+      '@radix-ui/react-context': 1.0.1(@types/react@18.2.21)(react@18.2.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
+      '@types/react': 18.2.21
+      '@types/react-dom': 18.2.7
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@radix-ui/react-slot@1.0.2(@types/react@18.2.21)(react@18.2.0):
     resolution: {integrity: sha512-YeTpuq4deV+6DusvVUW4ivBgnkHwECUu0BiN43L5UCDFgdhsRUWAghhTF5MbvNTPzmiFOx90asDSUjWuCNapwg==}
     peerDependencies:
       '@types/react': '*'
@@ -383,8 +422,8 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.22.10
-      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.20)(react@18.2.0)
-      '@types/react': 18.2.20
+      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.21)(react@18.2.0)
+      '@types/react': 18.2.21
       react: 18.2.0
     dev: false
 
@@ -514,8 +553,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node@20.5.2:
-    resolution: {integrity: sha512-5j/lXt7unfPOUlrKC34HIaedONleyLtwkKggiD/0uuMfT8gg2EOpg0dz4lCD15Ga7muC+1WzJZAjIB9simWd6Q==}
+  /@types/node@20.5.3:
+    resolution: {integrity: sha512-ITI7rbWczR8a/S6qjAW7DMqxqFMjjTo61qZVWJ1ubPvbIQsL5D/TvwjYEalM8Kthpe3hTzOGrF2TGbAu2uyqeA==}
     dev: true
 
   /@types/prop-types@15.7.5:
@@ -524,10 +563,10 @@ packages:
   /@types/react-dom@18.2.7:
     resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
     dependencies:
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
 
-  /@types/react@18.2.20:
-    resolution: {integrity: sha512-WKNtmsLWJM/3D5mG4U84cysVY31ivmyw85dE84fOCk5Hx78wezB/XEjVPWl2JTZ5FkEeaTJf+VgUAUn3PE7Isw==}
+  /@types/react@18.2.21:
+    resolution: {integrity: sha512-neFKG/sBAwGxHgXiIxnbm3/AAVQ/cMRS93hvBpg8xYRbeQSPVABp9U2bRnPf0iI4+Ucdv3plSxKK+3CW2ENJxA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
@@ -1848,7 +1887,7 @@ packages:
     resolution: {integrity: sha512-5eEbBDQT/jF1xg6l36P+mWGGoH9Spuy0PCdSr2dtWRDGC6ph/w9ZCL4lmESW8f8F7MwT3XKescfP0wnZWAKL9w==}
     hasBin: true
 
-  /jotai@2.3.1(@types/react@18.2.20)(react@18.2.0):
+  /jotai@2.3.1(@types/react@18.2.21)(react@18.2.0):
     resolution: {integrity: sha512-pXhx8/MeRUAHbzayerEUf9NHvP+Ba3q9WAvIMjaSwwuSCKEFhb8UW4XuZPC+Bv4u2ufvlyrxIZ+vy5UJ3f8JsQ==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
@@ -1860,7 +1899,7 @@ packages:
       react:
         optional: true
     dependencies:
-      '@types/react': 18.2.20
+      '@types/react': 18.2.21
       react: 18.2.0
     dev: false
 

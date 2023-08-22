@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import * as radixColors from '@radix-ui/colors';
 
 // @ts-ignore
 import windyRadixPlugin from 'windy-radix-palette';
@@ -9,11 +10,12 @@ import tailwindAnimatePlugin from 'tailwindcss-animate';
 
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'media',
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         primary: toRadixVars('lime'),
+        primaryContrast: radixColors.mauveDark.mauve1,
         neutral: toRadixVars('mauve'),
       },
       fontFamily: {
