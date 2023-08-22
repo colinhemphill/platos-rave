@@ -55,7 +55,7 @@ export default function App({ children }: PropsWithChildren) {
   return (
     <html className={jetbrainsMono.variable} lang="en">
       <body className="bg-background py-8 text-foreground">
-        <div className="container max-w-screen-lg">
+        <div className="container max-w-screen-xl">
           <main>{children}</main>
           <Footer />
         </div>
