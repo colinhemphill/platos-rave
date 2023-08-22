@@ -7,7 +7,7 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "Clamor Studio",
+    "productName": "Plato’s Rave",
     "version": "1.0.0"
   },
   "tauri": {
@@ -21,7 +21,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.clamor.dev",
+      "identifier": "com.platosrave.dev",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -38,7 +38,7 @@
         "fullscreen": false,
         "center": true,
         "resizable": true,
-        "title": "Clamor Studio",
+        "title": "Plato’s Rave",
         "width": 800,
         "height": 800
       }

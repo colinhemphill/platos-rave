@@ -1,11 +1,11 @@
 [package]
-name = "clamor-studio"
+name = "platos-rave"
 version = "0.0.0"
-description = "Music production tools"
-authors = ["you"]
+description = "Bigger than time"
+authors = ["Colin Hemphill"]
 license = ""
 repository = ""
-edition = "2021"
+edition = "2023"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
