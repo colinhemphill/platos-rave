@@ -9,7 +9,7 @@ export const gameMap: GameMap = [
     actions: [
       {
         action: ActionType.Interact,
-        objects: ['ENVELOPE'],
+        subjects: ['ENVELOPE'],
       },
     ],
   },

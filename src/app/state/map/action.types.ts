@@ -13,12 +13,12 @@ export enum ActionType {
 
 interface InteractAction {
   action: ActionType.Interact;
-  objects: Array<string>;
+  subjects: Array<string>;
 }
 
 interface WalkAction {
   action: ActionType.Walk;
-  directions: Array<Direction>;
+  subjects: Array<Direction>;
 }
 
 export type Action = InteractAction | WalkAction;
