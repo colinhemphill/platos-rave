@@ -63,6 +63,7 @@ export function GameInput() {
             className="uppercase"
             id="game-input"
             onChange={(e) => setInput(e.target.value.toUpperCase())}
+            placeholder="ACTION SUBJECT"
             value={input}
           />
           <Button size="xl" variant="primary">

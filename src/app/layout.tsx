@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import { PropsWithChildren } from 'react';
+import { TooltipProvider } from './components/ui/tooltip';
 import './globals.css';
 import {
   APP_DESCRIPTION,
@@ -55,10 +56,12 @@ export default function App({ children }: PropsWithChildren) {
   return (
     <html className={jetbrainsMono.variable} lang="en">
       <body className="dark bg-neutral-1 py-12 text-neutral-12">
-        <div className="container max-w-screen-xl">
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <TooltipProvider>
+          <div className="container max-w-screen-xl">
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </TooltipProvider>
       </body>
 
       <Analytics />

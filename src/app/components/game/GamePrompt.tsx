@@ -8,7 +8,7 @@ export function GamePrompt() {
 
   return (
     <section className="order-2 flex flex-col gap-8 rounded-lg border-2 border-neutral-6 p-8 lg:order-1 lg:w-8/12">
-      <div className="text-2xl font-bold uppercase text-neutral-12 duration-700 animate-in fade-in motion-safe:slide-in-from-top-4">
+      <div className="text-2xl font-bold uppercase text-neutral-12 duration-700 animate-in fade-in-0 motion-safe:slide-in-from-top-4">
         {playerRoom.room.name}
       </div>
       <div

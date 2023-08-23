@@ -19,6 +19,6 @@
   }
   .token,
   code {
-    @apply rounded-lg bg-neutral-3 px-2 text-neutral-11;
+    @apply rounded-lg bg-neutral-3 px-2 uppercase text-neutral-11;
   }
 }
