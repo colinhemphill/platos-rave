@@ -1,0 +1,17 @@
+{
+  "id": "approach-break-room",
+  "name": "The Container Store",
+  "body": {
+    "raw": "\nYou stand before a sign that reads \"Staff Only\".\n",
+    "html": "<p>You stand before a sign that reads \"Staff Only\".</p>"
+  },
+  "_id": "rooms/level-1/approach-break-room.md",
+  "_raw": {
+    "sourceFilePath": "rooms/level-1/approach-break-room.md",
+    "sourceFileName": "approach-break-room.md",
+    "sourceFileDir": "rooms/level-1",
+    "contentType": "markdown",
+    "flattenedPath": "rooms/level-1/approach-break-room"
+  },
+  "type": "Room"
+}

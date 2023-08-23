@@ -31,7 +31,7 @@ export function GameInput() {
     }
 
     const matchingSubject = matchingAction.subjects.find((validSubject) =>
-      input.includes(validSubject),
+      input.includes(validSubject.subject),
     );
 
     if (!matchingSubject) {
@@ -41,7 +41,7 @@ export function GameInput() {
     }
 
     setInput('');
-    setPlayerRoom(matchingAction.next.id);
+    setPlayerRoom(matchingSubject.next.id);
   };
 
   return (

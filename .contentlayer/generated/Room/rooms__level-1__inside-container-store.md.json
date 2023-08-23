@@ -1,0 +1,17 @@
+{
+  "id": "inside-container-store",
+  "name": "The Container Store",
+  "body": {
+    "raw": "\nYou are inside The Container Store.\n",
+    "html": "<p>You are inside The Container Store.</p>"
+  },
+  "_id": "rooms/level-1/inside-container-store.md",
+  "_raw": {
+    "sourceFilePath": "rooms/level-1/inside-container-store.md",
+    "sourceFileName": "inside-container-store.md",
+    "sourceFileDir": "rooms/level-1",
+    "contentType": "markdown",
+    "flattenedPath": "rooms/level-1/inside-container-store"
+  },
+  "type": "Room"
+}

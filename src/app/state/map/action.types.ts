@@ -8,23 +8,30 @@ export enum Direction {
 }
 
 export enum ActionType {
-  Walk = 'WALK',
+  Move = 'MOVE',
   Use = 'USE',
   Interact = 'INTERACT',
+  Travel = 'TRAVEL',
 }
 
-interface BaseAction {
+interface Subject {
+  subject: string;
   next: Room;
 }
 
 interface InteractAction {
   action: ActionType.Interact;
-  subjects: Array<string>;
+  subjects: Array<Subject>;
+}
+
+interface TravelAction {
+  action: ActionType.Travel;
+  subjects: Array<Subject>;
 }
 
 interface WalkAction {
-  action: ActionType.Walk;
-  subjects: Array<Direction>;
+  action: ActionType.Move;
+  subjects: Array<Subject>;
 }
 
-export type Action = BaseAction & (InteractAction | WalkAction);
+export type Action = InteractAction | WalkAction | TravelAction;

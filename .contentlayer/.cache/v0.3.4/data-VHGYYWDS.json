@@ -1,27 +1,5 @@
 {
   "cacheItemsMap": {
-    "rooms/invitation/invitation-accept.md": {
-      "document": {
-        "id": "invitation-accept",
-        "name": "An invitation",
-        "body": {
-          "raw": "\nYou break the seal and read the contents of the letter. \"Greetings party animal. Are you worthy of Plato’s Rave? The trials begin at 9:00 pm at The Container Store.\" There is no signature, but attached to the bottom of the letter is a single piece of hard candy in a plastic wrap.\n",
-          "html": "<p>You break the seal and read the contents of the letter. \"Greetings party animal. Are you worthy of Plato’s Rave? The trials begin at 9:00 pm at The Container Store.\" There is no signature, but attached to the bottom of the letter is a single piece of hard candy in a plastic wrap.</p>"
-        },
-        "_id": "rooms/invitation/invitation-accept.md",
-        "_raw": {
-          "sourceFilePath": "rooms/invitation/invitation-accept.md",
-          "sourceFileName": "invitation-accept.md",
-          "sourceFileDir": "rooms/invitation",
-          "contentType": "markdown",
-          "flattenedPath": "rooms/invitation/invitation-accept"
-        },
-        "type": "Room"
-      },
-      "documentHash": "1692811323009",
-      "hasWarnings": false,
-      "documentTypeName": "Room"
-    },
     "rooms/invitation/invitation.md": {
       "document": {
         "id": "invitation",
@@ -63,6 +41,72 @@
         "type": "Room"
       },
       "documentHash": "1692812069841",
+      "hasWarnings": false,
+      "documentTypeName": "Room"
+    },
+    "rooms/invitation/invitation-open.md": {
+      "document": {
+        "id": "invitation-open",
+        "name": "An invitation",
+        "body": {
+          "raw": "\nYou break the seal and read the contents of the letter. \"Greetings party animal. Are you worthy of Plato’s Rave? The trials begin at 9:00 pm at The Container Store.\" There is no signature, but attached to the bottom of the letter is a single piece of hard candy in a plastic wrap. Is a rave really taking place at `CONTAINER STORE`?\n",
+          "html": "<p>You break the seal and read the contents of the letter. \"Greetings party animal. Are you worthy of Plato’s Rave? The trials begin at 9:00 pm at The Container Store.\" There is no signature, but attached to the bottom of the letter is a single piece of hard candy in a plastic wrap. Is a rave really taking place at <code>CONTAINER STORE</code>?</p>"
+        },
+        "_id": "rooms/invitation/invitation-open.md",
+        "_raw": {
+          "sourceFilePath": "rooms/invitation/invitation-open.md",
+          "sourceFileName": "invitation-open.md",
+          "sourceFileDir": "rooms/invitation",
+          "contentType": "markdown",
+          "flattenedPath": "rooms/invitation/invitation-open"
+        },
+        "type": "Room"
+      },
+      "documentHash": "1692826291460",
+      "hasWarnings": false,
+      "documentTypeName": "Room"
+    },
+    "rooms/level-1/inside-container-store.md": {
+      "document": {
+        "id": "inside-container-store",
+        "name": "The Container Store",
+        "body": {
+          "raw": "\nYou are inside The Container Store.\n",
+          "html": "<p>You are inside The Container Store.</p>"
+        },
+        "_id": "rooms/level-1/inside-container-store.md",
+        "_raw": {
+          "sourceFilePath": "rooms/level-1/inside-container-store.md",
+          "sourceFileName": "inside-container-store.md",
+          "sourceFileDir": "rooms/level-1",
+          "contentType": "markdown",
+          "flattenedPath": "rooms/level-1/inside-container-store"
+        },
+        "type": "Room"
+      },
+      "documentHash": "1692826377467",
+      "hasWarnings": false,
+      "documentTypeName": "Room"
+    },
+    "rooms/level-1/approach-break-room.md": {
+      "document": {
+        "id": "approach-break-room",
+        "name": "The Container Store",
+        "body": {
+          "raw": "\nYou stand before a sign that reads \"Staff Only\".\n",
+          "html": "<p>You stand before a sign that reads \"Staff Only\".</p>"
+        },
+        "_id": "rooms/level-1/approach-break-room.md",
+        "_raw": {
+          "sourceFilePath": "rooms/level-1/approach-break-room.md",
+          "sourceFileName": "approach-break-room.md",
+          "sourceFileDir": "rooms/level-1",
+          "contentType": "markdown",
+          "flattenedPath": "rooms/level-1/approach-break-room"
+        },
+        "type": "Room"
+      },
+      "documentHash": "1692826768755",
       "hasWarnings": false,
       "documentTypeName": "Room"
     }

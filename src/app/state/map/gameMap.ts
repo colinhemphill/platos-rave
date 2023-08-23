@@ -1,6 +1,6 @@
 import { fetchRoom } from '@/lib/fetchers/fetchRoom';
 import { atom } from 'jotai';
-import { ActionType } from './action.types';
+import { ActionType, Direction } from './action.types';
 import { GameMap } from './room.types';
 
 export const gameMap: GameMap = [
@@ -9,18 +9,53 @@ export const gameMap: GameMap = [
     actions: [
       {
         action: ActionType.Interact,
-        subjects: ['ENVELOPE'],
-        next: fetchRoom('invitation-accept'),
+        subjects: [{ subject: 'ENVELOPE', next: fetchRoom('invitation-open') }],
       },
     ],
   },
   {
-    room: fetchRoom('invitation-accept'),
+    room: fetchRoom('invitation-open'),
     actions: [
       {
-        action: ActionType.Interact,
-        subjects: ['INVITATION'],
-        next: fetchRoom('arrive-container-store'),
+        action: ActionType.Travel,
+        subjects: [
+          {
+            subject: 'CONTAINER STORE',
+            next: fetchRoom('arrive-container-store'),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    room: fetchRoom('arrive-container-store'),
+    actions: [
+      {
+        action: ActionType.Move,
+        subjects: [
+          {
+            subject: Direction.North,
+            next: fetchRoom('inside-container-store'),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    room: fetchRoom('inside-container-store'),
+    actions: [
+      {
+        action: ActionType.Move,
+        subjects: [
+          {
+            subject: Direction.East,
+            next: fetchRoom('approach-break-room'),
+          },
+          {
+            subject: Direction.South,
+            next: fetchRoom('arrive-container-store'),
+          },
+        ],
       },
     ],
   },
