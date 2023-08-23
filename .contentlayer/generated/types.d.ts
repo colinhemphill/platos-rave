@@ -13,6 +13,8 @@ export type Room = {
   _id: string
   _raw: Local.RawDocumentData
   type: 'Room'
+  /** A human readable id to reference the room by */
+  id: string
   /** The name of the room */
   name: string
   /** Markdown file body */

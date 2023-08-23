@@ -1,0 +1,17 @@
+{
+  "id": "arrive-container-store",
+  "name": "The Container Store",
+  "body": {
+    "raw": "\nYou arrive at The Container Store.\n",
+    "html": "<p>You arrive at The Container Store.</p>"
+  },
+  "_id": "rooms/level-1/arrive-container-store.md",
+  "_raw": {
+    "sourceFilePath": "rooms/level-1/arrive-container-store.md",
+    "sourceFileName": "arrive-container-store.md",
+    "sourceFileDir": "rooms/level-1",
+    "contentType": "markdown",
+    "flattenedPath": "rooms/level-1/arrive-container-store"
+  },
+  "type": "Room"
+}

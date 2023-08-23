@@ -1,3 +1,5 @@
+import { Room } from '@content';
+
 export enum Direction {
   North = 'NORTH',
   South = 'SOUTH',
@@ -11,6 +13,10 @@ export enum ActionType {
   Interact = 'INTERACT',
 }
 
+interface BaseAction {
+  next: Room;
+}
+
 interface InteractAction {
   action: ActionType.Interact;
   subjects: Array<string>;
@@ -21,4 +27,4 @@ interface WalkAction {
   subjects: Array<Direction>;
 }
 
-export type Action = InteractAction | WalkAction;
+export type Action = BaseAction & (InteractAction | WalkAction);

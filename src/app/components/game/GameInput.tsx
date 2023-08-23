@@ -1,8 +1,8 @@
 'use client';
 
 import { inputAtom, inputErrorAtom } from '@/state/player/input';
-import { playerRoomAtom } from '@/state/player/room';
-import { useAtom, useAtomValue } from 'jotai';
+import { playerRoomAtom, setPlayerRoomAtom } from '@/state/player/room';
+import { useAtom, useAtomValue, useSetAtom } from 'jotai';
 import { FormEventHandler } from 'react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
@@ -12,6 +12,7 @@ export function GameInput() {
   const [input, setInput] = useAtom(inputAtom);
   const [inputError, setInputError] = useAtom(inputErrorAtom);
   const playerRoom = useAtomValue(playerRoomAtom);
+  const setPlayerRoom = useSetAtom(setPlayerRoomAtom);
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -21,30 +22,26 @@ export function GameInput() {
       return;
     }
 
-    const [action, subject] = input.split(' ');
-    const matchingAction = playerRoom.actions.find(
-      ({ action: validAction }) => validAction === action,
+    const matchingAction = playerRoom.actions.find(({ action: validAction }) =>
+      input.includes(validAction),
     );
 
-    if (!action) {
-      return setInputError('An action was not recognized');
-    } else if (!matchingAction) {
-      return setInputError(`Action ${action} is not valid`);
-    } else if (!subject) {
-      return setInputError(
-        `The subject of action ${action} was not recognized`,
-      );
+    if (!matchingAction) {
+      return setInputError('No valid action recognized');
     }
 
-    const matchingSubject = matchingAction.subjects.find(
-      (validSubject) => validSubject === subject,
+    const matchingSubject = matchingAction.subjects.find((validSubject) =>
+      input.includes(validSubject),
     );
 
     if (!matchingSubject) {
       return setInputError(
-        `The subject ${subject} is not valid for action ${action}`,
+        `No valid subject recognized for action ${matchingAction.action}`,
       );
     }
+
+    setInput('');
+    setPlayerRoom(matchingAction.next.id);
   };
 
   return (
@@ -60,10 +57,9 @@ export function GameInput() {
         <div className="flex flex-col gap-3 md:flex-row md:items-center">
           <Input
             autoFocus
-            className="uppercase"
             id="game-input"
             onChange={(e) => setInput(e.target.value.toUpperCase())}
-            placeholder="ACTION SUBJECT"
+            placeholder="Type an ACTION and a SUBJECT"
             value={input}
           />
           <Button size="xl" variant="primary">
