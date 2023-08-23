@@ -1,0 +1,16 @@
+{
+  "name": "An invitation",
+  "body": {
+    "raw": "\nA knock at your door. You’re new in town and haven’t had a chance to meet your neighbors yet. Could it be one of them? When you open the door, nothing is in front of you except for a small `ENVELOPE` at your feet. The `ENVELOPE` has a wax seal over the seam.\n",
+    "html": "<p>A knock at your door. You’re new in town and haven’t had a chance to meet your neighbors yet. Could it be one of them? When you open the door, nothing is in front of you except for a small <code>ENVELOPE</code> at your feet. The <code>ENVELOPE</code> has a wax seal over the seam.</p>"
+  },
+  "_id": "rooms/invitation.md",
+  "_raw": {
+    "sourceFilePath": "rooms/invitation.md",
+    "sourceFileName": "invitation.md",
+    "sourceFileDir": "rooms",
+    "contentType": "markdown",
+    "flattenedPath": "rooms/invitation"
+  },
+  "type": "Room"
+}

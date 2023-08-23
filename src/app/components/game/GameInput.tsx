@@ -11,7 +11,7 @@ export function GameInput() {
   };
 
   return (
-    <section className="flex flex-col gap-4 rounded-lg border-2 border-neutral-6 p-8">
+    <section className="flex flex-col gap-4">
       <form className="flex flex-col gap-3" onSubmit={onSubmit}>
         <Label htmlFor="game-input">What do you do?</Label>
 

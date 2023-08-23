@@ -30,9 +30,3 @@ type Alignment =
   | 8
   | 9
   | 10;
-
-type GameMap = [
-  {
-    room: { description: string; name: string };
-  },
-];

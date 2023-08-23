@@ -16,7 +16,7 @@ export default {
       colors: {
         primary: toRadixVars('lime'),
         primaryContrast: radixColors.mauveDark.mauve1,
-        neutral: toRadixVars('mauve'),
+        neutral: toRadixVars('slate'),
       },
       fontFamily: {
         mono: ['var(--font-jetbrains-mono)'],

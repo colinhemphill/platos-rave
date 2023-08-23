@@ -4,7 +4,10 @@
     "paths": {
       "@/*": [
         "./src/app/*"
-      ]
+      ],
+      "@content": [
+        "./.contentlayer/generated"
+      ],
     },
     "target": "ESNext",
     "useDefineForClassFields": true,
@@ -34,7 +37,8 @@
   },
   "include": [
     "src",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".contentlayer/generated"
   ],
   "exclude": [
     "node_modules"

@@ -17,4 +17,8 @@
   li a:hover {
     @apply decoration-inherit;
   }
+  .token,
+  code {
+    @apply rounded-lg bg-neutral-3 px-2 text-neutral-11;
+  }
 }

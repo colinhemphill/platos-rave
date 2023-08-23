@@ -1,3 +1,4 @@
+import { GameActions } from './GameActions';
 import { GameInput } from './GameInput';
 import { GamePrompt } from './GamePrompt';
 import { GameStats } from './GameStats';
@@ -9,6 +10,8 @@ export function GameScreen() {
         <GamePrompt />
         <GameStats />
       </div>
+
+      <GameActions />
       <GameInput />
     </div>
   );

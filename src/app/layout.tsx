@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 export default function App({ children }: PropsWithChildren) {
   return (
     <html className={jetbrainsMono.variable} lang="en">
-      <body className="dark bg-neutral-1 py-8 text-neutral-12">
+      <body className="dark bg-neutral-1 py-12 text-neutral-12">
         <div className="container max-w-screen-xl">
           <main>{children}</main>
           <Footer />
