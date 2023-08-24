@@ -8,29 +8,11 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
-import { inventoryAtom } from '@/state/player/inventory';
-import { playerRoomAtom } from '@/state/player/room';
-import { alignmentAtom } from '@/state/stats/alignment';
-import { hungerAtom } from '@/state/stats/hunger';
-import { timeAtom } from '@/state/stats/time';
-import { useSetAtom } from 'jotai';
-import { RESET } from 'jotai/utils';
+import { useResetGame } from '@/lib/hooks/useResetGame';
 import { MenubarDialogProps } from './GameMenu';
 
 export function ResetDialog({ isOpen, setIsOpen }: MenubarDialogProps) {
-  const setRoom = useSetAtom(playerRoomAtom);
-  const setInventory = useSetAtom(inventoryAtom);
-  const setAlignment = useSetAtom(alignmentAtom);
-  const setHunger = useSetAtom(hungerAtom);
-  const setTime = useSetAtom(timeAtom);
-
-  const resetAll = () => {
-    setRoom(RESET);
-    setInventory(RESET);
-    setAlignment(RESET);
-    setHunger(RESET);
-    setTime(RESET);
-  };
+  const resetGame = useResetGame();
 
   return (
     <AlertDialog onOpenChange={setIsOpen} open={isOpen}>
@@ -45,7 +27,7 @@ export function ResetDialog({ isOpen, setIsOpen }: MenubarDialogProps) {
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction onClick={resetAll}>Reset game</AlertDialogAction>
+          <AlertDialogAction onClick={resetGame}>Reset game</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

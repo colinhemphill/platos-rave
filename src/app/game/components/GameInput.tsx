@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { ActionType } from '@/state/map/action.types';
 import { inputAtom, inputErrorAtom } from '@/state/player/input';
 import { playerRoomAtom, setPlayerRoomAtom } from '@/state/player/room';
 import { adjustTimeAtom } from '@/state/stats/time';
@@ -24,7 +25,7 @@ export function GameInput() {
       return;
     }
 
-    const matchingAction = playerRoom.actions.find(({ action: validAction }) =>
+    const matchingAction = playerRoom.actions.find(({ method: validAction }) =>
       input.includes(validAction),
     );
 
@@ -32,22 +33,27 @@ export function GameInput() {
       return setInputError('No valid action recognized');
     }
 
-    const matchingSubject = matchingAction.subjects.find((validSubject) =>
-      input.includes(validSubject.subject),
-    );
-
-    if (!matchingSubject) {
-      return setInputError(
-        `No valid subject recognized for action ${matchingAction.action}`,
+    if (matchingAction.actionType === ActionType.Direct) {
+      setPlayerRoom(matchingAction.next.id);
+    } else if (matchingAction.actionType === ActionType.Subject) {
+      const matchingSubject = matchingAction.subjects.find((validSubject) =>
+        input.includes(validSubject.subject),
       );
+
+      if (!matchingSubject) {
+        return setInputError(
+          `No valid subject recognized for action ${matchingAction.method}`,
+        );
+      }
+
+      setPlayerRoom(matchingSubject.next.id);
+
+      if (matchingSubject?.statChanges?.time) {
+        adjustTime(matchingSubject.statChanges.time);
+      }
     }
 
     setInput('');
-    setPlayerRoom(matchingSubject.next.id);
-
-    if (matchingSubject?.statChanges?.time) {
-      adjustTime(matchingSubject.statChanges.time);
-    }
   };
 
   return (

@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 import { atom } from 'jotai';
 import { atomWithStorage } from 'jotai/utils';
 
-const startTime = dayjs().startOf('day').hour(20).minute(30).valueOf();
+const startTime = dayjs().startOf('day').hour(20).minute(0).valueOf();
 
 export const timeAtom = atomWithStorage<number>('platosrave-time', startTime);
 

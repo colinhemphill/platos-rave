@@ -5,8 +5,8 @@
         "id": "invitation-open",
         "name": "An invitation",
         "body": {
-          "raw": "\nYou break the seal and read the contents of the letter. \"Greetings party animal. Are you worthy of Plato’s Rave? The trials begin at 9:00 pm at The Container Store.\" There is no signature, but attached to the bottom of the letter is a single piece of hard candy in a plastic wrap. Is a rave really taking place at `CONTAINER STORE`?\n",
-          "html": "<p>You break the seal and read the contents of the letter. \"Greetings party animal. Are you worthy of Plato’s Rave? The trials begin at 9:00 pm at The Container Store.\" There is no signature, but attached to the bottom of the letter is a single piece of hard candy in a plastic wrap. Is a rave really taking place at <code>CONTAINER STORE</code>?</p>"
+          "raw": "\nYou break the seal and read the contents of the letter. \"Are you worthy of Plato’s Rave? The trials begin at 9:00 pm at `The Container Store`. There is no signature, but a single piece of wrapped candy is attached to the bottom of the letter. Is there really a rave taking place at The `Container Store`?\n",
+          "html": "<p>You break the seal and read the contents of the letter. \"Are you worthy of Plato’s Rave? The trials begin at 9:00 pm at <code>The Container Store</code>. There is no signature, but a single piece of wrapped candy is attached to the bottom of the letter. Is there really a rave taking place at The <code>Container Store</code>?</p>"
         },
         "_id": "rooms/invitation/invitation-open.md",
         "_raw": {
@@ -18,17 +18,17 @@
         },
         "type": "Room"
       },
-      "documentHash": "1692826291460",
+      "documentHash": "1692891756848",
       "hasWarnings": false,
       "documentTypeName": "Room"
     },
     "rooms/invitation/invitation.md": {
       "document": {
         "id": "invitation",
-        "name": "An invitation",
+        "name": "Home",
         "body": {
-          "raw": "\nA knock at your door. You’re new in town and haven’t had a chance to meet your neighbors yet, but certainly they wouldn’t be dropping by at this hour, right? When you open the door, nothing is in front of you except for a small, nondescript `ENVELOPE` at your feet. The `ENVELOPE` has a lime green wax seal pressed into the seam.\n",
-          "html": "<p>A knock at your door. You’re new in town and haven’t had a chance to meet your neighbors yet, but certainly they wouldn’t be dropping by at this hour, right? When you open the door, nothing is in front of you except for a small, nondescript <code>ENVELOPE</code> at your feet. The <code>ENVELOPE</code> has a lime green wax seal pressed into the seam.</p>"
+          "raw": "\n\"Oh great gods of rave, I beg you to drop the beat on this household!\" As you fall to your knees and start to evoke the rhythm from within, there is a knock at your door. You jump to your feet and swing open the door. Expecting to see another party animal, you are instead greeted by an `envelope` at your feet. The `envelope` has a lime green wax seal pressed into the seam.\n",
+          "html": "<p>\"Oh great gods of rave, I beg you to drop the beat on this household!\" As you fall to your knees and start to evoke the rhythm from within, there is a knock at your door. You jump to your feet and swing open the door. Expecting to see another party animal, you are instead greeted by an <code>envelope</code> at your feet. The <code>envelope</code> has a lime green wax seal pressed into the seam.</p>"
         },
         "_id": "rooms/invitation/invitation.md",
         "_raw": {
@@ -40,7 +40,7 @@
         },
         "type": "Room"
       },
-      "documentHash": "1692888729548",
+      "documentHash": "1692891229561",
       "hasWarnings": false,
       "documentTypeName": "Room"
     },
@@ -71,8 +71,8 @@
         "id": "arrive-container-store",
         "name": "The Container Store",
         "body": {
-          "raw": "\nYou arrive at The Container Store.\n",
-          "html": "<p>You arrive at The Container Store.</p>"
+          "raw": "\nYou arrive at your destination and pull into the parking lot of an average-looking Container Store: a large gray building with a blue logo across the façade. It must be near closing time for the establishment. Maybe you should pregame before this “trial” starts at 9:00?\n",
+          "html": "<p>You arrive at your destination and pull into the parking lot of an average-looking Container Store: a large gray building with a blue logo across the façade. It must be near closing time for the establishment. Maybe you should pregame before this “trial” starts at 9:00?</p>"
         },
         "_id": "rooms/level-1/arrive-container-store.md",
         "_raw": {
@@ -84,7 +84,7 @@
         },
         "type": "Room"
       },
-      "documentHash": "1692812069841",
+      "documentHash": "1692892417470",
       "hasWarnings": false,
       "documentTypeName": "Room"
     },
@@ -93,8 +93,8 @@
         "id": "inside-container-store",
         "name": "The Container Store",
         "body": {
-          "raw": "\nYou are inside The Container Store.\n",
-          "html": "<p>You are inside The Container Store.</p>"
+          "raw": "\nYou are inside The Container Store. That’s all the content I have right now 🪩\n",
+          "html": "<p>You are inside The Container Store. That’s all the content I have right now 🪩</p>"
         },
         "_id": "rooms/level-1/inside-container-store.md",
         "_raw": {
@@ -106,7 +106,29 @@
         },
         "type": "Room"
       },
-      "documentHash": "1692826377467",
+      "documentHash": "1692893275979",
+      "hasWarnings": false,
+      "documentTypeName": "Room"
+    },
+    "rooms/invitation/invitation-pray.md": {
+      "document": {
+        "id": "invitation-pray",
+        "name": "Home",
+        "body": {
+          "raw": "\nYou’ve been in town for a few weeks now, and are starting to settle into your new life in the big city. It’s been busy, so you’ve hardly had a chance to go out or meet new people. You spend your evenings hoping that somebody will invite you to a rave. Perhaps the only option is to seek the counsel of the `rave gods`.\n",
+          "html": "<p>You’ve been in town for a few weeks now, and are starting to settle into your new life in the big city. It’s been busy, so you’ve hardly had a chance to go out or meet new people. You spend your evenings hoping that somebody will invite you to a rave. Perhaps the only option is to seek the counsel of the <code>rave gods</code>.</p>"
+        },
+        "_id": "rooms/invitation/invitation-pray.md",
+        "_raw": {
+          "sourceFilePath": "rooms/invitation/invitation-pray.md",
+          "sourceFileName": "invitation-pray.md",
+          "sourceFileDir": "rooms/invitation",
+          "contentType": "markdown",
+          "flattenedPath": "rooms/invitation/invitation-pray"
+        },
+        "type": "Room"
+      },
+      "documentHash": "1692890707020",
       "hasWarnings": false,
       "documentTypeName": "Room"
     }

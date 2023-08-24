@@ -14,8 +14,8 @@ export function GameActions() {
         <div className="text-lg font-bold">Available actions</div>
         <ul className="flex gap-3">
           {playerRoom.actions.map((action) => (
-            <li className="token" key={action.action}>
-              {action.action}
+            <li className="token" key={action.method}>
+              {action.method}
             </li>
           ))}
         </ul>

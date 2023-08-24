@@ -1,6 +1,6 @@
 ---
 id: invitation
-name: An invitation
+name: Home
 ---
 
-A knock at your door. You’re new in town and haven’t had a chance to meet your neighbors yet, but certainly they wouldn’t be dropping by at this hour, right? When you open the door, nothing is in front of you except for a small, nondescript `ENVELOPE` at your feet. The `ENVELOPE` has a lime green wax seal pressed into the seam.
+"Oh great gods of rave, I beg you to drop the beat on this household!" As you fall to your knees and start to evoke the rhythm from within, there is a knock at your door. You jump to your feet and swing open the door. Expecting to see another party animal, you are instead greeted by an `envelope` at your feet. The `envelope` has a lime green wax seal pressed into the seam.

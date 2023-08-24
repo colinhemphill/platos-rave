@@ -2,8 +2,8 @@
   "id": "inside-container-store",
   "name": "The Container Store",
   "body": {
-    "raw": "\nYou are inside The Container Store.\n",
-    "html": "<p>You are inside The Container Store.</p>"
+    "raw": "\nYou are inside The Container Store. That’s all the content I have right now 🪩\n",
+    "html": "<p>You are inside The Container Store. That’s all the content I have right now 🪩</p>"
   },
   "_id": "rooms/level-1/inside-container-store.md",
   "_raw": {

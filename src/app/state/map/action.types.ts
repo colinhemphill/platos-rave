@@ -7,11 +7,10 @@ export enum Direction {
   West = 'WEST',
 }
 
-export enum ActionType {
+export enum Method {
   Move = 'MOVE',
   Use = 'USE',
   Interact = 'INTERACT',
-  Travel = 'TRAVEL',
 }
 
 interface Subject {
@@ -28,19 +27,23 @@ interface Subject {
   };
 }
 
-interface InteractAction {
-  action: ActionType.Interact;
+export enum ActionType {
+  Direct = 'DIRECT',
+  Subject = 'SUBJECT',
+}
+
+interface BaseAction {
+  method: Method | string;
+}
+
+interface DirectAction extends BaseAction {
+  actionType: ActionType.Direct;
+  next: Room;
+}
+
+interface SubjectAction extends BaseAction {
+  actionType: ActionType.Subject;
   subjects: Array<Subject>;
 }
 
-interface TravelAction {
-  action: ActionType.Travel;
-  subjects: Array<Subject>;
-}
-
-interface WalkAction {
-  action: ActionType.Move;
-  subjects: Array<Subject>;
-}
-
-export type Action = InteractAction | WalkAction | TravelAction;
+export type Action = DirectAction | SubjectAction;
