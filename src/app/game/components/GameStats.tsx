@@ -2,6 +2,11 @@
 
 import { Progress } from '@/components/ui/progress';
 import { Slider } from '@/components/ui/slider';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import { alignmentAtom } from '@/state/stats/alignment';
 import { hungerAtom } from '@/state/stats/hunger';
 import { timeAtom } from '@/state/stats/time';
@@ -41,15 +46,27 @@ export function GameStats() {
         </div>
       </div>
       <div className="flex items-center gap-3">
-        <strong className="text-sm text-red-11">WHDD</strong>
-        <Slider
-          defaultValue={[alignment]}
-          disabled
-          min={-10}
-          max={10}
-          aria-readonly
-        />
-        <strong className="text-sm text-primary-11">PLUR</strong>
+        <Tooltip>
+          <TooltipTrigger>
+            <strong className="text-sm text-red-11">WHDD</strong>
+          </TooltipTrigger>
+          <TooltipContent>
+            <div className="font-bold text-red-11">Path of the dark raver</div>
+            <div>War, hate, division, disrespect</div>
+          </TooltipContent>
+        </Tooltip>
+        <Slider defaultValue={[alignment]} disabled min={-10} max={10} />
+        <Tooltip>
+          <TooltipTrigger>
+            <strong className="text-sm text-primary-11">PLUR</strong>
+          </TooltipTrigger>
+          <TooltipContent>
+            <div className="font-bold text-primary-11">
+              Path of the light raver
+            </div>
+            <div>Peace, love, unity, respect</div>
+          </TooltipContent>
+        </Tooltip>
       </div>
     </aside>
   );
