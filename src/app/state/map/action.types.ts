@@ -17,6 +17,15 @@ export enum ActionType {
 interface Subject {
   subject: string;
   next: Room;
+
+  statChanges?: {
+    // Amount of time in minutes to pass when the action is called
+    time?: number;
+    // Amount the player alignment will change when the action is called
+    alignment?: number;
+    // Amount the player hunger will change when the action is called
+    hunger?: number;
+  };
 }
 
 interface InteractAction {

@@ -22,6 +22,9 @@ export const gameMap: GameMap = [
           {
             subject: 'CONTAINER STORE',
             next: fetchRoom('arrive-container-store'),
+            statChanges: {
+              time: 30,
+            },
           },
         ],
       },

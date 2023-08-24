@@ -2,6 +2,7 @@
 
 import { inputAtom, inputErrorAtom } from '@/state/player/input';
 import { playerRoomAtom, setPlayerRoomAtom } from '@/state/player/room';
+import { adjustTimeAtom } from '@/state/stats/time';
 import { useAtom, useAtomValue, useSetAtom } from 'jotai';
 import { FormEventHandler } from 'react';
 import { Button } from '../ui/button';
@@ -13,6 +14,7 @@ export function GameInput() {
   const [inputError, setInputError] = useAtom(inputErrorAtom);
   const playerRoom = useAtomValue(playerRoomAtom);
   const setPlayerRoom = useSetAtom(setPlayerRoomAtom);
+  const adjustTime = useSetAtom(adjustTimeAtom);
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -42,6 +44,10 @@ export function GameInput() {
 
     setInput('');
     setPlayerRoom(matchingSubject.next.id);
+
+    if (matchingSubject?.statChanges?.time) {
+      adjustTime(matchingSubject.statChanges.time);
+    }
   };
 
   return (

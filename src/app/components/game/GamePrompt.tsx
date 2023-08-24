@@ -15,7 +15,6 @@ export function GamePrompt() {
           key={playerRoom.room.name}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, transition: { duration: 0 } }}
           transition={{ duration: 1 }}
         >
           {playerRoom.room.name}
@@ -26,8 +25,7 @@ export function GamePrompt() {
           key={playerRoom.room.body.raw}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, transition: { duration: 0 } }}
-          transition={{ delay: 1, duration: 1 }}
+          transition={{ duration: 1 }}
         />
       </AnimatePresence>
     </section>

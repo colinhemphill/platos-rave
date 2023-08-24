@@ -4,6 +4,7 @@ import { alignmentAtom } from '@/state/stats/alignment';
 import { hungerAtom } from '@/state/stats/hunger';
 import { timeAtom } from '@/state/stats/time';
 import { cva } from 'class-variance-authority';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useAtomValue } from 'jotai';
 import { Progress } from '../ui/progress';
 import { Slider } from '../ui/slider';
@@ -20,7 +21,16 @@ export function GameStats() {
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-3">
           <strong className={statTitleClasses()}>Time</strong>
-          {time.format('h A')}
+          <AnimatePresence>
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              key={time.unix()}
+            >
+              {time.format('h:mm A')}
+            </motion.div>
+          </AnimatePresence>
         </div>
         <div className="flex items-center gap-3">
           <strong className={statTitleClasses()}>Hunger</strong>
