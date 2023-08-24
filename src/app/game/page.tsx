@@ -1,5 +1,5 @@
-import { GameScreen } from '../components/game/GameScreen';
+import { GameScreen } from './components/GameScreen';
 
-export default function MainPage() {
+export default function GamePage() {
   return <GameScreen />;
 }

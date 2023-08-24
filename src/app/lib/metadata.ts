@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 
-export const APP_NAME = 'Plato’s Rave';
-export const APP_DESCRIPTION = 'Bigger than time';
+export const APP_NAME = 'Plato’s Rave: Bigger Than Time';
+export const APP_DESCRIPTION =
+  'A text adventure inspired by My Brother, My Brother & Me.';
 export const APP_URL = 'https://platosrave.com';
 
 export const metadataOpenGraphDefaults: Metadata['openGraph'] = {

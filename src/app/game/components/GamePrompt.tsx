@@ -8,7 +8,7 @@ export function GamePrompt() {
   const playerRoom = useAtomValue(playerRoomAtom);
 
   return (
-    <section className="order-2 flex h-96 flex-col gap-8 overflow-auto rounded-lg border-2 border-neutral-6 p-8 lg:order-1 lg:w-8/12">
+    <section className="order-2 flex h-96 flex-col gap-8 overflow-auto rounded-lg border-2 border-neutral-7 p-8 lg:order-1 lg:w-8/12">
       <AnimatePresence>
         <motion.div
           className="text-2xl font-bold uppercase text-neutral-12"

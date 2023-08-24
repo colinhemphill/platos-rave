@@ -4,12 +4,14 @@ import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary-11/50 disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-neutral-9/50 disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
         default: 'bg-neutral-9 text-neutral-12 hover:bg-neutral-10',
-        primary: 'bg-primary-9 text-primaryContrast hover:bg-primary-10',
+        primary:
+          'bg-primary-9 text-primaryContrast hover:bg-primary-10 focus:ring-primary-11/50',
+        outline: 'bg-transparent text-neutral-12 border border-neutral-7',
       },
       size: {
         default: 'h-9 px-4 py-2',

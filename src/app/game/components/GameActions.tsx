@@ -9,7 +9,7 @@ export function GameActions() {
   const inventory = useAtomValue(inventoryAtom);
 
   return (
-    <section className="flex flex-col gap-8 rounded-lg border-2 border-neutral-6 p-8 md:flex-row">
+    <section className="flex flex-col gap-8 rounded-lg border-2 border-neutral-7 p-8 md:flex-row">
       <div className="flex flex-1 flex-col gap-3">
         <div className="text-lg font-bold">Available actions</div>
         <ul className="flex gap-3">

@@ -1,13 +1,13 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import { inputAtom, inputErrorAtom } from '@/state/player/input';
 import { playerRoomAtom, setPlayerRoomAtom } from '@/state/player/room';
 import { adjustTimeAtom } from '@/state/stats/time';
 import { useAtom, useAtomValue, useSetAtom } from 'jotai';
 import { FormEventHandler } from 'react';
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
-import { Label } from '../ui/label';
 
 export function GameInput() {
   const [input, setInput] = useAtom(inputAtom);
