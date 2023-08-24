@@ -1,4 +1,7 @@
-import { atom } from 'jotai';
+import { atomWithStorage } from 'jotai/utils';
 import { Inventory } from '../map/inventory.types';
 
-export const inventoryAtom = atom<Inventory>([]);
+export const inventoryAtom = atomWithStorage<Inventory>(
+  'platosrave-inventory',
+  [],
+);

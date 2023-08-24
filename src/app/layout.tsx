@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   title: {
-    default: `${APP_NAME}: Bigger Than Time`,
+    default: APP_NAME,
     template: `%s | ${APP_NAME}`,
   },
   twitter: metadataTwitterDefaults,

@@ -1,3 +1,6 @@
-import { atom } from 'jotai';
+import { atomWithStorage } from 'jotai/utils';
 
-export const alignmentAtom = atom<Alignment>(0);
+export const alignmentAtom = atomWithStorage<Alignment>(
+  'platosrave-alignment',
+  0,
+);

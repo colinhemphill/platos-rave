@@ -6,15 +6,18 @@ import { alignmentAtom } from '@/state/stats/alignment';
 import { hungerAtom } from '@/state/stats/hunger';
 import { timeAtom } from '@/state/stats/time';
 import { cva } from 'class-variance-authority';
+import dayjs from 'dayjs';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useAtomValue } from 'jotai';
+import { useMemo } from 'react';
 
 const statTitleClasses = cva('uppercase py-1 px-2 bg-neutral-3 rounded-lg');
 
 export function GameStats() {
-  const time = useAtomValue(timeAtom);
+  const unixTime = useAtomValue(timeAtom);
   const hunger = useAtomValue(hungerAtom);
   const alignment = useAtomValue(alignmentAtom);
+  const time = useMemo(() => dayjs(unixTime), [unixTime]);
 
   return (
     <aside className="order-1 flex flex-col justify-between rounded-lg border-2 border-neutral-7 p-8 lg:order-2 lg:w-4/12">
@@ -26,7 +29,7 @@ export function GameStats() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              key={time.unix()}
+              key={unixTime}
             >
               {time.format('h:mm A')}
             </motion.div>

@@ -1,3 +1,3 @@
-import { atom } from 'jotai';
+import { atomWithStorage } from 'jotai/utils';
 
-export const hungerAtom = atom<Hunger>(0);
+export const hungerAtom = atomWithStorage<Hunger>('platosrave-hunger', 0);
