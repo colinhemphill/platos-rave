@@ -3,8 +3,8 @@
     "id": "invitation-open",
     "name": "An invitation",
     "body": {
-      "raw": "\nYou break the seal and read the contents of the letter. \"Are you worthy of Plato’s Rave? The trials begin at 9:00 pm at `The Container Store`. There is no signature, but a single piece of wrapped candy is attached to the bottom of the letter. Is there really a rave taking place at The `Container Store`?\n",
-      "html": "<p>You break the seal and read the contents of the letter. \"Are you worthy of Plato’s Rave? The trials begin at 9:00 pm at <code>The Container Store</code>. There is no signature, but a single piece of wrapped candy is attached to the bottom of the letter. Is there really a rave taking place at The <code>Container Store</code>?</p>"
+      "raw": "\nYou break the seal and read the contents of the letter. \"Are you worthy of Plato’s Rave? The trials begin at 9:00 pm at The `Container Store`. There is no signature, but a single piece of wrapped candy is attached to the bottom of the letter. Is there really a rave taking place at The `Container Store`?\n",
+      "html": "<p>You break the seal and read the contents of the letter. \"Are you worthy of Plato’s Rave? The trials begin at 9:00 pm at The <code>Container Store</code>. There is no signature, but a single piece of wrapped candy is attached to the bottom of the letter. Is there really a rave taking place at The <code>Container Store</code>?</p>"
     },
     "_id": "rooms/invitation/invitation-open.md",
     "_raw": {
@@ -13,6 +13,23 @@
       "sourceFileDir": "rooms/invitation",
       "contentType": "markdown",
       "flattenedPath": "rooms/invitation/invitation-open"
+    },
+    "type": "Room"
+  },
+  {
+    "id": "invitation-pray",
+    "name": "Home",
+    "body": {
+      "raw": "\nYou’ve been in town for a few weeks now, and are starting to settle into your new life in the big city. It’s been busy, so you’ve hardly had a chance to go out or meet new people. You spend your evenings hoping that somebody will invite you to a rave. Perhaps the only option is to seek the counsel of the `rave gods`.\n",
+      "html": "<p>You’ve been in town for a few weeks now, and are starting to settle into your new life in the big city. It’s been busy, so you’ve hardly had a chance to go out or meet new people. You spend your evenings hoping that somebody will invite you to a rave. Perhaps the only option is to seek the counsel of the <code>rave gods</code>.</p>"
+    },
+    "_id": "rooms/invitation/invitation-pray.md",
+    "_raw": {
+      "sourceFilePath": "rooms/invitation/invitation-pray.md",
+      "sourceFileName": "invitation-pray.md",
+      "sourceFileDir": "rooms/invitation",
+      "contentType": "markdown",
+      "flattenedPath": "rooms/invitation/invitation-pray"
     },
     "type": "Room"
   },
@@ -81,23 +98,6 @@
       "sourceFileDir": "rooms/level-1",
       "contentType": "markdown",
       "flattenedPath": "rooms/level-1/inside-container-store"
-    },
-    "type": "Room"
-  },
-  {
-    "id": "invitation-pray",
-    "name": "Home",
-    "body": {
-      "raw": "\nYou’ve been in town for a few weeks now, and are starting to settle into your new life in the big city. It’s been busy, so you’ve hardly had a chance to go out or meet new people. You spend your evenings hoping that somebody will invite you to a rave. Perhaps the only option is to seek the counsel of the `rave gods`.\n",
-      "html": "<p>You’ve been in town for a few weeks now, and are starting to settle into your new life in the big city. It’s been busy, so you’ve hardly had a chance to go out or meet new people. You spend your evenings hoping that somebody will invite you to a rave. Perhaps the only option is to seek the counsel of the <code>rave gods</code>.</p>"
-    },
-    "_id": "rooms/invitation/invitation-pray.md",
-    "_raw": {
-      "sourceFilePath": "rooms/invitation/invitation-pray.md",
-      "sourceFileName": "invitation-pray.md",
-      "sourceFileDir": "rooms/invitation",
-      "contentType": "markdown",
-      "flattenedPath": "rooms/invitation/invitation-pray"
     },
     "type": "Room"
   }

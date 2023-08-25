@@ -10,7 +10,7 @@ export const gameMap: GameMap = [
       {
         actionType: ActionType.Subject,
         method: 'PRAY',
-        subjects: [{ subject: 'RAVE GODS', next: fetchRoom('invitation') }],
+        subjects: [{ subject: 'GODS', next: fetchRoom('invitation') }],
       },
     ],
   },

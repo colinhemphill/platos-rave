@@ -3,57 +3,15 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { ActionType } from '@/state/map/action.types';
-import { inputAtom, inputErrorAtom } from '@/state/player/input';
-import { playerRoomAtom, setPlayerRoomAtom } from '@/state/player/room';
-import { adjustTimeAtom } from '@/state/stats/time';
-import { useAtom, useAtomValue, useSetAtom } from 'jotai';
 import { FormEventHandler } from 'react';
+import { useGameInput } from '../lib/useGameInput';
 
 export function GameInput() {
-  const [input, setInput] = useAtom(inputAtom);
-  const [inputError, setInputError] = useAtom(inputErrorAtom);
-  const playerRoom = useAtomValue(playerRoomAtom);
-  const setPlayerRoom = useSetAtom(setPlayerRoomAtom);
-  const adjustTime = useSetAtom(adjustTimeAtom);
+  const { error, input, interpretInput, setInput } = useGameInput();
 
   const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    setInputError(null);
-
-    if (!input) {
-      return;
-    }
-
-    const matchingAction = playerRoom.actions.find(({ method: validAction }) =>
-      input.includes(validAction),
-    );
-
-    if (!matchingAction) {
-      return setInputError('No valid action recognized');
-    }
-
-    if (matchingAction.actionType === ActionType.Direct) {
-      setPlayerRoom(matchingAction.next.id);
-    } else if (matchingAction.actionType === ActionType.Subject) {
-      const matchingSubject = matchingAction.subjects.find((validSubject) =>
-        input.includes(validSubject.subject),
-      );
-
-      if (!matchingSubject) {
-        return setInputError(
-          `No valid subject recognized for action ${matchingAction.method}`,
-        );
-      }
-
-      setPlayerRoom(matchingSubject.next.id);
-
-      if (matchingSubject?.statChanges?.time) {
-        adjustTime(matchingSubject.statChanges.time);
-      }
-    }
-
-    setInput('');
+    interpretInput();
   };
 
   return (
@@ -61,9 +19,7 @@ export function GameInput() {
       <form className="flex flex-col gap-3" onSubmit={onSubmit}>
         <div className="flex flex-col items-center justify-between gap-3 md:flex-row">
           <Label htmlFor="game-input">What do you do?</Label>
-          {inputError && (
-            <div className="leading-none text-red-11">{inputError}</div>
-          )}
+          {error && <div className="leading-none text-red-11">{error}</div>}
         </div>
 
         <div className="flex flex-col gap-3 md:flex-row md:items-center">
