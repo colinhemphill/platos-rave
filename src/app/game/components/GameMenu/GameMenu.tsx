@@ -7,7 +7,7 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from '@/components/ui/menubar';
-import Link from 'next/link';
+import Version from '@/components/version';
 import { useState } from 'react';
 import { AboutDialog } from './AboutDialog';
 import { ResetDialog } from './ResetDialog';
@@ -46,10 +46,7 @@ export function GameMenu() {
           </MenubarContent>
         </MenubarMenu>
         <div className="flex-1 text-right text-sm text-neutral-11">
-          Alpha version{' '}
-          <Link className="link" href="/changelog">
-            {process.env.APP_VERSION}
-          </Link>
+          <Version />
         </div>
       </Menubar>
 
