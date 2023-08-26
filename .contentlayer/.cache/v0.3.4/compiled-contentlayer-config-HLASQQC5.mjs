@@ -16,12 +16,18 @@ var Room = defineDocumentType(() => ({
     }
   }
 }));
+var Changelog = defineDocumentType(() => ({
+  name: "Changelog",
+  filePathPattern: "changelog.md",
+  isSingleton: true
+}));
 var contentlayer_config_default = makeSource({
   contentDirPath: "src/content",
-  documentTypes: [Room]
+  documentTypes: [Room, Changelog]
 });
 export {
+  Changelog,
   Room,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-VHGYYWDS.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-HLASQQC5.mjs.map

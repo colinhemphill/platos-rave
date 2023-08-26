@@ -17,7 +17,13 @@ export const Room = defineDocumentType(() => ({
   },
 }));
 
+export const Changelog = defineDocumentType(() => ({
+  name: 'Changelog',
+  filePathPattern: 'changelog.md',
+  isSingleton: true,
+}));
+
 export default makeSource({
   contentDirPath: 'src/content',
-  documentTypes: [Room],
+  documentTypes: [Room, Changelog],
 });

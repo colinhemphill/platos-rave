@@ -8,6 +8,16 @@ export { isType } from 'contentlayer/client'
 export type { Markdown, MDX, ImageFieldData, IsoDateTimeString }
 
 /** Document types */
+export type Changelog = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Changelog'
+  /** Markdown file body */
+  body: Markdown
+
+}
+
 export type Room = {
   /** File path relative to `contentDirPath` */
   _id: string
@@ -30,8 +40,8 @@ export type Room = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = Room
-export type DocumentTypeNames = 'Room'
+export type DocumentTypes = Changelog | Room
+export type DocumentTypeNames = 'Changelog' | 'Room'
 
 export type NestedTypes = never
 export type NestedTypeNames = never
@@ -39,6 +49,7 @@ export type NestedTypeNames = never
 export type DataExports = {
   allDocuments: DocumentTypes[]
   allRooms: Room[]
+  changelog: Changelog
 }
 
 
@@ -58,6 +69,7 @@ declare global {
 }
 
 export type DocumentTypeMap = {
+  Changelog: Changelog
   Room: Room
 }
 

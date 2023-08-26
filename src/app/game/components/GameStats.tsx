@@ -24,6 +24,8 @@ export function GameStats() {
   const alignment = useAtomValue(alignmentAtom);
   const time = useMemo(() => dayjs(unixTime), [unixTime]);
 
+  console.log(alignment);
+
   return (
     <aside className="order-1 flex flex-col justify-between rounded-lg border-2 border-neutral-7 p-8 lg:order-2 lg:w-4/12">
       <div className="flex flex-col gap-4">
@@ -55,7 +57,7 @@ export function GameStats() {
             <div>War, hate, division, disrespect</div>
           </TooltipContent>
         </Tooltip>
-        <Slider defaultValue={[alignment]} disabled min={-10} max={10} />
+        <Slider value={[alignment]} disabled min={-10} max={10} />
         <Tooltip>
           <TooltipTrigger>
             <strong className="text-sm text-primary-11">PLUR</strong>

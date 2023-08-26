@@ -1,0 +1,17 @@
+{
+  "id": "invitation-gather-munchies",
+  "name": "Time to prepare",
+  "body": {
+    "raw": "\nIf this rave lives up to its promises, I’ll definitely be hungry tonight. Alright, time to head out to The `CONTAINER STORE`.\n",
+    "html": "<p>If this rave lives up to its promises, I’ll definitely be hungry tonight. Alright, time to head out to The <code>CONTAINER STORE</code>.</p>"
+  },
+  "_id": "rooms/invitation/invitation-gather-munchies.md",
+  "_raw": {
+    "sourceFilePath": "rooms/invitation/invitation-gather-munchies.md",
+    "sourceFileName": "invitation-gather-munchies.md",
+    "sourceFileDir": "rooms/invitation",
+    "contentType": "markdown",
+    "flattenedPath": "rooms/invitation/invitation-gather-munchies"
+  },
+  "type": "Room"
+}

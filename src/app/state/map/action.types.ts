@@ -1,4 +1,5 @@
 import { Room } from '@content';
+import { InventoryItem } from '../player/inventory.types';
 
 export enum Direction {
   North = 'NORTH',
@@ -13,18 +14,26 @@ export enum Method {
   Interact = 'INTERACT',
 }
 
+export interface StatChanges {
+  // Amount of time in minutes to pass when the action is called
+  time?: number;
+  // Amount the player rave stat will change when the action is called
+  rave?: number;
+  // Amount the player alignment will change when the action is called
+  alignment?: number;
+  // Amount the player hunger will change when the action is called
+  hunger?: number;
+  // An item to add to inventory when the action is called
+  addInventoryItem?: InventoryItem;
+  // An item to remove from inventory when the action is called
+  removeInventoryItem?: InventoryItem;
+}
+
 interface Subject {
   subject: string;
   next: Room;
 
-  statChanges?: {
-    // Amount of time in minutes to pass when the action is called
-    time?: number;
-    // Amount the player alignment will change when the action is called
-    alignment?: number;
-    // Amount the player hunger will change when the action is called
-    hunger?: number;
-  };
+  statChanges?: StatChanges;
 }
 
 export enum ActionType {
@@ -39,6 +48,7 @@ interface BaseAction {
 interface DirectAction extends BaseAction {
   actionType: ActionType.Direct;
   next: Room;
+  statChanges?: StatChanges;
 }
 
 interface SubjectAction extends BaseAction {

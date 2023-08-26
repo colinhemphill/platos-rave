@@ -8,12 +8,14 @@ export function GameActions() {
   const playerRoom = useAtomValue(playerRoomAtom);
   const inventory = useAtomValue(inventoryAtom);
 
+  const actions = [{ method: 'USE' }, ...playerRoom.actions];
+
   return (
     <section className="flex flex-col gap-8 rounded-lg border-2 border-neutral-7 p-8 md:flex-row">
       <div className="flex flex-1 flex-col gap-3">
         <div className="text-lg font-bold">Available actions</div>
         <ul className="flex gap-3">
-          {playerRoom.actions.map((action) => (
+          {actions.map((action) => (
             <li className="token" key={action.method}>
               {action.method}
             </li>
@@ -27,8 +29,8 @@ export function GameActions() {
             <div className="text-neutral-11">No inventory items</div>
           )}
           {inventory.map((item) => (
-            <li className="token" key={item}>
-              {item}
+            <li className="token" key={item.item}>
+              {item.item}
             </li>
           ))}
         </ul>

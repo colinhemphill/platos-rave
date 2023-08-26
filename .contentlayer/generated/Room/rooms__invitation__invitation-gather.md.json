@@ -1,0 +1,17 @@
+{
+  "id": "invitation-prepare",
+  "name": "Time to prepare",
+  "body": {
+    "raw": "\nShould I take anything with me? Might need some `munchies` to keep my energy up. Or I suppose I do have those `drugs` someone gave me if it might be that kind of night.\n",
+    "html": "<p>Should I take anything with me? Might need some <code>munchies</code> to keep my energy up. Or I suppose I do have those <code>drugs</code> someone gave me if it might be that kind of night.</p>"
+  },
+  "_id": "rooms/invitation/invitation-gather.md",
+  "_raw": {
+    "sourceFilePath": "rooms/invitation/invitation-gather.md",
+    "sourceFileName": "invitation-gather.md",
+    "sourceFileDir": "rooms/invitation",
+    "contentType": "markdown",
+    "flattenedPath": "rooms/invitation/invitation-gather"
+  },
+  "type": "Room"
+}

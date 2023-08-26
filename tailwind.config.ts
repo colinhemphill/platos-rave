@@ -1,5 +1,5 @@
-import type { Config } from 'tailwindcss';
 import * as radixColors from '@radix-ui/colors';
+import type { Config } from 'tailwindcss';
 
 // @ts-ignore
 import windyRadixPlugin from 'windy-radix-palette';
@@ -7,6 +7,8 @@ import windyRadixPlugin from 'windy-radix-palette';
 import { toRadixVars } from 'windy-radix-palette/vars';
 // @ts-ignore
 import tailwindAnimatePlugin from 'tailwindcss-animate';
+// @ts-ignore
+import tailwindTypographyPlugin from '@tailwindcss/typography';
 
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -50,5 +52,9 @@ export default {
       },
     },
   },
-  plugins: [tailwindAnimatePlugin, windyRadixPlugin({})],
+  plugins: [
+    tailwindAnimatePlugin,
+    windyRadixPlugin({}),
+    tailwindTypographyPlugin,
+  ],
 } satisfies Config;

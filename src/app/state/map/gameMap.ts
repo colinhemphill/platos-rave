@@ -1,5 +1,6 @@
 import { fetchRoom } from '@/lib/fetchers/fetchRoom';
 import { atom } from 'jotai';
+import { itemsMap } from '../player/inventoryItems';
 import { ActionType, Direction, Method } from './action.types';
 import { GameMap } from './room.types';
 
@@ -29,14 +30,67 @@ export const gameMap: GameMap = [
     actions: [
       {
         actionType: ActionType.Subject,
-        method: 'TRAVEL',
+        method: 'PREPARE',
         subjects: [
           {
-            subject: 'CONTAINER STORE',
-            next: fetchRoom('arrive-container-store'),
+            subject: 'RAVE',
+            next: fetchRoom('invitation-prepare'),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    room: fetchRoom('invitation-prepare'),
+    actions: [
+      {
+        actionType: ActionType.Subject,
+        method: 'GATHER',
+        subjects: [
+          {
+            subject: 'MUNCHIES',
+            next: fetchRoom('invitation-gather-munchies'),
             statChanges: {
-              time: 30,
+              addInventoryItem: itemsMap.munchies,
             },
+          },
+          {
+            subject: 'DRUGS',
+            next: fetchRoom('invitation-gather-drugs'),
+            statChanges: {
+              alignment: -1,
+              addInventoryItem: itemsMap.drugs,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    room: fetchRoom('invitation-gather-munchies'),
+    actions: [
+      {
+        actionType: ActionType.Subject,
+        method: 'DRIVE',
+        subjects: [
+          {
+            subject: 'STORE',
+            next: fetchRoom('arrive-container-store'),
+          },
+        ],
+      },
+    ],
+  },
+  {
+    room: fetchRoom('invitation-gather-drugs'),
+    actions: [
+      {
+        actionType: ActionType.Subject,
+        method: 'DRIVE',
+        subjects: [
+          {
+            subject: 'STORE',
+            next: fetchRoom('arrive-container-store'),
           },
         ],
       },

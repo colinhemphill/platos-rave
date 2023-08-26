@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../contentlayer.config.ts"],
+  "sourcesContent": ["import { defineDocumentType, makeSource } from 'contentlayer/source-files';\n\nexport const Room = defineDocumentType(() => ({\n  name: 'Room',\n  filePathPattern: 'rooms/**/*.md',\n  fields: {\n    id: {\n      type: 'string',\n      description: 'A human readable id to reference the room by',\n      required: true,\n    },\n    name: {\n      type: 'string',\n      description: 'The name of the room',\n      required: true,\n    },\n  },\n}));\n\nexport const Changelog = defineDocumentType(() => ({\n  name: 'Changelog',\n  filePathPattern: 'changelog.md',\n  isSingleton: true,\n}));\n\nexport default makeSource({\n  contentDirPath: 'src/content',\n  documentTypes: [Room, Changelog],\n});\n"],
+  "mappings": ";AAAA,SAAS,oBAAoB,kBAAkB;AAExC,IAAM,OAAO,mBAAmB,OAAO;AAAA,EAC5C,MAAM;AAAA,EACN,iBAAiB;AAAA,EACjB,QAAQ;AAAA,IACN,IAAI;AAAA,MACF,MAAM;AAAA,MACN,aAAa;AAAA,MACb,UAAU;AAAA,IACZ;AAAA,IACA,MAAM;AAAA,MACJ,MAAM;AAAA,MACN,aAAa;AAAA,MACb,UAAU;AAAA,IACZ;AAAA,EACF;AACF,EAAE;AAEK,IAAM,YAAY,mBAAmB,OAAO;AAAA,EACjD,MAAM;AAAA,EACN,iBAAiB;AAAA,EACjB,aAAa;AACf,EAAE;AAEF,IAAO,8BAAQ,WAAW;AAAA,EACxB,gBAAgB;AAAA,EAChB,eAAe,CAAC,MAAM,SAAS;AACjC,CAAC;",
+  "names": []
+}

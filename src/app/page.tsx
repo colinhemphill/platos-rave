@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Logomark from './components/Logomark';
 import Footer from './components/footer/Footer';
 import Heading from './components/heading';
 import { Button } from './components/ui/button';
@@ -14,6 +15,7 @@ export default function IntroPage() {
               Plato’s Rave
             </Heading>
             <Heading level={2}>Bigger Than Time</Heading>
+            <Logomark className="h-24 w-auto" />
             <p className="mt-8 text-center">{APP_DESCRIPTION}</p>
           </header>
         </div>
