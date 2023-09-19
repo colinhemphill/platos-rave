@@ -29,7 +29,7 @@
     "@vercel/edge-config": "0.3.0",
     "class-variance-authority": "0.7.0",
     "contentlayer": "0.3.4",
-    "dayjs": "1.11.9",
+    "dayjs": "1.11.10",
     "framer-motion": "10.16.4",
     "jotai": "2.4.1",
     "lucide-react": "0.274.0",
