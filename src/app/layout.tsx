@@ -1,9 +1,8 @@
 import { Analytics } from '@vercel/analytics/react';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 import { TooltipProvider } from './components/ui/tooltip';
-import './globals.css';
 import {
   APP_DESCRIPTION,
   APP_NAME,
@@ -11,6 +10,8 @@ import {
   metadataOpenGraphDefaults,
   metadataTwitterDefaults,
 } from './lib/metadata';
+
+import './globals.css';
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -48,15 +49,19 @@ export const metadata: Metadata = {
     template: `%s | ${APP_NAME}`,
   },
   twitter: metadataTwitterDefaults,
-  viewport: { width: 'device-width', initialScale: 1 },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function App({ children }: PropsWithChildren) {
   return (
     <html className={jetbrainsMono.variable} lang="en">
-      <body className="dark bg-neutral-1 py-12 text-neutral-12 selection:bg-primary-11/80 selection:text-neutral-1">
+      <body className="selection:bg-primary-11/80 dark bg-neutral-1 text-neutral-12 selection:text-neutral-1">
         <TooltipProvider>
-          <div className="container max-w-screen-xl">{children}</div>
+          <div className="container max-w-screen-xl py-12">{children}</div>
         </TooltipProvider>
       </body>
 

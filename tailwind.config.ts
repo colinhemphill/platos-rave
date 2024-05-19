@@ -1,24 +1,28 @@
 import * as radixColors from '@radix-ui/colors';
-import type { Config } from 'tailwindcss';
-
-// @ts-ignore
-import windyRadixPlugin from 'windy-radix-palette';
-// @ts-ignore
-import { toRadixVars } from 'windy-radix-palette/vars';
-// @ts-ignore
-import tailwindAnimatePlugin from 'tailwindcss-animate';
-// @ts-ignore
 import tailwindTypographyPlugin from '@tailwindcss/typography';
+import type { Config } from 'tailwindcss';
+import tailwindAnimatePlugin from 'tailwindcss-animate';
+import { createPlugin } from 'windy-radix-palette';
+
+const colors = createPlugin({
+  colors: {
+    lime: radixColors.lime,
+    limeDark: radixColors.limeDark,
+    slate: radixColors.slate,
+    slateDark: radixColors.slateDark,
+  },
+});
+
 
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/app/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: toRadixVars('lime'),
+        primary: colors.alias('lime'),
         primaryContrast: radixColors.mauveDark.mauve1,
-        neutral: toRadixVars('slate'),
+        neutral: colors.alias('slate'),
       },
       fontFamily: {
         mono: ['var(--font-jetbrains-mono)'],
@@ -54,7 +58,7 @@ export default {
   },
   plugins: [
     tailwindAnimatePlugin,
-    windyRadixPlugin({}),
+    colors.plugin,
     tailwindTypographyPlugin,
   ],
 } satisfies Config;

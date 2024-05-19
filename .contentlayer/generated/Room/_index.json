@@ -1,56 +1,5 @@
 [
   {
-    "id": "approach-break-room",
-    "name": "The Container Store",
-    "body": {
-      "raw": "\nYou stand before a sign that reads \"Staff Only\".\n",
-      "html": "<p>You stand before a sign that reads \"Staff Only\".</p>"
-    },
-    "_id": "rooms/level-1/approach-break-room.md",
-    "_raw": {
-      "sourceFilePath": "rooms/level-1/approach-break-room.md",
-      "sourceFileName": "approach-break-room.md",
-      "sourceFileDir": "rooms/level-1",
-      "contentType": "markdown",
-      "flattenedPath": "rooms/level-1/approach-break-room"
-    },
-    "type": "Room"
-  },
-  {
-    "id": "arrive-container-store",
-    "name": "The Container Store",
-    "body": {
-      "raw": "\nYou arrive at your destination and pull into the parking lot of an average-looking Container Store: a large gray building with a blue logo across the façade. It must be near closing time for the establishment. Maybe you should pregame before this “trial” starts at 9:00?\n",
-      "html": "<p>You arrive at your destination and pull into the parking lot of an average-looking Container Store: a large gray building with a blue logo across the façade. It must be near closing time for the establishment. Maybe you should pregame before this “trial” starts at 9:00?</p>"
-    },
-    "_id": "rooms/level-1/arrive-container-store.md",
-    "_raw": {
-      "sourceFilePath": "rooms/level-1/arrive-container-store.md",
-      "sourceFileName": "arrive-container-store.md",
-      "sourceFileDir": "rooms/level-1",
-      "contentType": "markdown",
-      "flattenedPath": "rooms/level-1/arrive-container-store"
-    },
-    "type": "Room"
-  },
-  {
-    "id": "inside-container-store",
-    "name": "The Container Store",
-    "body": {
-      "raw": "\nYou are inside The Container Store. That’s all the content I have right now 🪩\n",
-      "html": "<p>You are inside The Container Store. That’s all the content I have right now 🪩</p>"
-    },
-    "_id": "rooms/level-1/inside-container-store.md",
-    "_raw": {
-      "sourceFilePath": "rooms/level-1/inside-container-store.md",
-      "sourceFileName": "inside-container-store.md",
-      "sourceFileDir": "rooms/level-1",
-      "contentType": "markdown",
-      "flattenedPath": "rooms/level-1/inside-container-store"
-    },
-    "type": "Room"
-  },
-  {
     "id": "invitation-gather-drugs",
     "name": "Time to prepare",
     "body": {
@@ -149,6 +98,57 @@
       "sourceFileDir": "rooms/invitation",
       "contentType": "markdown",
       "flattenedPath": "rooms/invitation/invitation"
+    },
+    "type": "Room"
+  },
+  {
+    "id": "approach-break-room",
+    "name": "The Container Store",
+    "body": {
+      "raw": "\nYou stand before a sign that reads \"Staff Only\".\n",
+      "html": "<p>You stand before a sign that reads \"Staff Only\".</p>"
+    },
+    "_id": "rooms/level-1/approach-break-room.md",
+    "_raw": {
+      "sourceFilePath": "rooms/level-1/approach-break-room.md",
+      "sourceFileName": "approach-break-room.md",
+      "sourceFileDir": "rooms/level-1",
+      "contentType": "markdown",
+      "flattenedPath": "rooms/level-1/approach-break-room"
+    },
+    "type": "Room"
+  },
+  {
+    "id": "arrive-container-store",
+    "name": "The Container Store",
+    "body": {
+      "raw": "\nYou arrive at your destination and pull into the parking lot of an average-looking Container Store: a large gray building with a blue logo across the façade. It must be near closing time for the establishment. Maybe you should pregame before this “trial” starts at 9:00?\n",
+      "html": "<p>You arrive at your destination and pull into the parking lot of an average-looking Container Store: a large gray building with a blue logo across the façade. It must be near closing time for the establishment. Maybe you should pregame before this “trial” starts at 9:00?</p>"
+    },
+    "_id": "rooms/level-1/arrive-container-store.md",
+    "_raw": {
+      "sourceFilePath": "rooms/level-1/arrive-container-store.md",
+      "sourceFileName": "arrive-container-store.md",
+      "sourceFileDir": "rooms/level-1",
+      "contentType": "markdown",
+      "flattenedPath": "rooms/level-1/arrive-container-store"
+    },
+    "type": "Room"
+  },
+  {
+    "id": "inside-container-store",
+    "name": "The Container Store",
+    "body": {
+      "raw": "\nYou are inside The Container Store. That’s all the content I have right now 🪩\n",
+      "html": "<p>You are inside The Container Store. That’s all the content I have right now 🪩</p>"
+    },
+    "_id": "rooms/level-1/inside-container-store.md",
+    "_raw": {
+      "sourceFilePath": "rooms/level-1/inside-container-store.md",
+      "sourceFileName": "inside-container-store.md",
+      "sourceFileDir": "rooms/level-1",
+      "contentType": "markdown",
+      "flattenedPath": "rooms/level-1/inside-container-store"
     },
     "type": "Room"
   }
