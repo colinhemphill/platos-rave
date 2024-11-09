@@ -1,4 +1,3 @@
-import { Analytics } from '@vercel/analytics/react';
 import { Metadata, Viewport } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 import { PropsWithChildren } from 'react';
@@ -64,8 +63,6 @@ export default function App({ children }: PropsWithChildren) {
           <div className="container max-w-screen-xl py-12">{children}</div>
         </TooltipProvider>
       </body>
-
-      <Analytics />
     </html>
   );
 }
